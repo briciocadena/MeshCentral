@@ -20,7 +20,8 @@
         "displayName": "NuubixRemote",
         "description": "Agente de soporte remoto NuubixRemote",
         "companyName": "Nuubix",
-        "serviceName": "NuubixRemoteAgent"
+        "serviceName": "nuubixremoteagent",
+        "fileName": "nuubixremoteagent"
       }
     }
   }
