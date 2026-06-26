@@ -39,8 +39,8 @@
 <body style="overflow:hidden" onbeforeunload="return onBeforeUnload(event)">
     <div id=p11 class="noselect" style="overflow:hidden;position:relative">
         <div id="startTips" style="top:15px;right:15px;width:calc(50vh);position:absolute;background-color:gold;z-index:1000;padding:10px;border-radius:8px;box-shadow:3px 3px 10px gray">
-            Welcome to the MeshCentral translator. You can use this to help translate MeshCentral into other languages. Start by selecting a language, translate a few strings and save the strings to your server. Then, hit "Translate Server" to apply your changes to your server's web pages.<br /><br />
-            When ready, please mail the "meshcentral-data/translate.json" file to <a href="mailto:ylianst@gmail.com">ylianst@gmail.com</a> for inclusion in the MeshCentral official builds.<br /><br />
+            Welcome to the NuubixRemote translator. You can use this to help translate NuubixRemote into other languages. Start by selecting a language, translate a few strings and save the strings to your server. Then, hit "Translate Server" to apply your changes to your server's web pages.<br /><br />
+            When ready, please mail the "meshcentral-data/translate.json" file to <a href="mailto:ylianst@gmail.com">ylianst@gmail.com</a> for inclusion in the NuubixRemote official builds.<br /><br />
             <a onclick="closeStartTips()"><b>Close</b></a>
         </div>
         <div id=deskarea0>
@@ -49,7 +49,7 @@
             <div id=deskarea0 style="position:absolute;left:0;right:0;top:0;height:28px;background-color:#036;color:#c8c8c8">
                 <input style="float:right;margin:3px" id="TransServerButton" type=button value="Translate Server" onclick="translateServer()">
                 <div style="float:right;padding:2px" id="mainStatus"></div>
-                <div style="font-size:20px;font-family:Arial;padding:3px"><b>MeshCentral Translator</b></div>
+                <div style="font-size:20px;font-family:Arial;padding:3px"><b>NuubixRemote Translator</b></div>
             </div>
             <div id=deskarea1 class="areaHead" style="margin-top:28px">
                 <div class="toright2" style="margin-top:3px;margin-right:5px">
@@ -645,7 +645,7 @@
         }
 
         function translateServer() {
-            var x = "Perform server translation? The MeshCentral server will reset for 10 to 30 seconds to perform this operation.";
+            var x = "Perform server translation? The NuubixRemote server will reset for 10 to 30 seconds to perform this operation.";
             setDialogMode(2, "Translate Server", 3, translateServerEx, x);
         }
 
@@ -663,8 +663,8 @@
                 if ((x == null) || (x.response == null)) { messagebox("Server Translation", "ERROR: Unable to parse server response."); return; }
                 if (x.response == 'ok') {
                     var text = "The server translation process is now running.<br />Please allow up to 5 minutes for completion.<br /><br />";
-                    text += "If this is your <b>first translation</b>,<br />Please restart your MeshCentral server after the 5 minutes.<br /></br />";
-                    text += "If you are <b>updating a translation</b>,<br />Please refresh your MeshCentral web browser tabs after the 5 minutes.<br /><br />";
+                    text += "If this is your <b>first translation</b>,<br />Please restart your NuubixRemote server after the 5 minutes.<br /></br />";
+                    text += "If you are <b>updating a translation</b>,<br />Please refresh your NuubixRemote web browser tabs after the 5 minutes.<br /><br />";
                     text += "To submit your work, please email the generated <b>translate.json</b> file (located in <code>meshcentral-data/</code>) to one of the developers.";
                     messagebox("Server Translation", text);
                 } else {

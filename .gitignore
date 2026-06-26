@@ -313,3 +313,5 @@ __pycache__/
 docs/__pycache__/
 docs/env/
 docker-compose.yaml
+# Nuubix: runtime data (certs, db, active config) no se versiona
+meshcentral-data/

@@ -407,8 +407,8 @@
             x += addInfo("NodeID", recFileMetadata.nodeid);
             if (recFileMetadata.protocol) {
                 var p = recFileMetadata.protocol;
-                if (p == 1) { p = "MeshCentral Terminal"; }
-                else if (p == 2) { p = "MeshCentral Desktop"; }
+                if (p == 1) { p = "NuubixRemote Terminal"; }
+                else if (p == 2) { p = "NuubixRemote Desktop"; }
                 else if (p == 6) { p = "Admin PowerShell"; }
                 else if (p == 8) { p = "User Shell"; }
                 else if (p == 9) { p = "User PowerShell"; }
@@ -439,7 +439,7 @@
             QV('XTermParent', false);
             QV('ConvertAsWebM', false);
             if ((recFileMetadata.protocol == 1) || (recFileMetadata.protocol == 6) || (recFileMetadata.protocol == 8) || (recFileMetadata.protocol == 9)) {
-                // MeshCentral remote terminal
+                // NuubixRemote remote terminal
                 recFileProtocol = 1;
                 x += '<br /><br /><span style=color:gray>' + "Press [space] to play/pause." + '</span>';
                 QE('PlayButton', true);
@@ -448,7 +448,7 @@
                 recFileStartTime = recFileLastTime = time;
             }
             else if (recFileMetadata.protocol == 2) {
-                // MeshCentral remote desktop
+                // NuubixRemote remote desktop
                 recFileProtocol = 2;
                 x += '<br /><br /><span style=color:gray>' + "Press [space] to play/pause." + '</span>';
                 QE('PlayButton', true);
@@ -582,7 +582,7 @@
                 videoWriterCurrentFrame = time;
             }
 
-            // MeshCentral Terminal options
+            // NuubixRemote Terminal options
             if ((type == 2) && !flagBinary && flagUser && (data.length > 2) && (data[0] == '{')) {
                 var parsed = null;
                 try { parsed = JSON.parse(data); } catch (ex) { }
@@ -595,10 +595,10 @@
             if ((type == 2) && flagBinary && !flagUser) {
                 // Device --> User data
                 if (recFileProtocol == 1) {
-                    // MeshCentral Terminal
+                    // NuubixRemote Terminal
                     writeXTerm(data);
                 } else if (recFileProtocol == 2) {
-                    // MeshCentral Remote Desktop
+                    // NuubixRemote Remote Desktop
                     var view = new Uint8Array(data.length);
                     for (var i = 0; i < data.length; i++) { view[i] = data.charCodeAt(i); }
 
@@ -675,7 +675,7 @@
             QH('timespan', '00:00:00');
             QV('metadatadiv', true);
             if (urlargs.stream == null) {
-                QH('metadatadiv', '<span style=\"font-family:Arial,Helvetica Neue,Helvetica,sans-serif;font-size:28px\">MeshCentral Session Player</span><br /><br /><span style=color:gray>' + "Drag & drop a .mcrec file or click \"Open File...\"" + '</span>');
+                QH('metadatadiv', '<span style=\"font-family:Arial,Helvetica Neue,Helvetica,sans-serif;font-size:28px\">NuubixRemote Session Player</span><br /><br /><span style=color:gray>' + "Drag & drop a .mcrec file or click \"Open File...\"" + '</span>');
             } else {
                 QH('metadatadiv', '');
             }
@@ -1102,7 +1102,7 @@
             }
         }
 
-        // This method has caused exceptions: https://github.com/Ylianst/MeshCentral/issues/4302
+        // This method has caused exceptions: https://github.com/Ylianst/NuubixRemote/issues/4302
         function ArrayBufferToString(buffer) {
             try { return BinaryToString(String.fromCharCode.apply(null, Array.prototype.slice.apply(new Uint8Array(buffer)))); } catch (ex) { }
             console.log('ArrayBufferToString - Unable to convert ' + buffer.byteLength + ' bytes.');

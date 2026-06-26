@@ -1,0 +1,27 @@
+{
+  "$schema": "../meshcentral-config-schema.json",
+  "settings": {
+    "port": 4430,
+    "redirPort": 8080,
+    "WANonly": true,
+    "cert": "192.168.60.16"
+  },
+  "domains": {
+    "": {
+      "title": "NuubixRemote",
+      "title2": "Soporte Remoto",
+      "footer": "© 2026 Nuubix — nuubix.mx",
+      "loginfooter": "NuubixRemote — Soporte Remoto Seguro",
+      "welcomeText": "Conéctate a tus equipos desde cualquier lugar con NuubixRemote.",
+      "newAccounts": true,
+      "nightMode": 1,
+      "meshMessengerTitle": "NuubixRemote",
+      "agentCustomization": {
+        "displayName": "NuubixRemote",
+        "description": "Agente de soporte remoto NuubixRemote",
+        "companyName": "Nuubix",
+        "serviceName": "NuubixRemoteAgent"
+      }
+    }
+  }
+}

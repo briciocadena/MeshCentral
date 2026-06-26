@@ -2538,7 +2538,7 @@
             y += addHtmlValue("Dates & Time", x);
 
             if ((userinfo.siteadmin == 0xFFFFFFFF) && (domain == '')) {
-                y += '<br /><a rel="noreferrer noopener" target="_blank" href="translator.htm">' + "Help translate MeshCentral" + '</a>';
+                y += '<br /><a rel="noreferrer noopener" target="_blank" href="translator.htm">' + "Help translate NuubixRemote" + '</a>';
             }
 
             setDialogMode(2, "Localization Settings", 3, account_showLocalizationSettingsEx, y);
@@ -4123,7 +4123,7 @@
         }
 
         function deviceToastFunctionEx() {
-            meshserver.send({ action: 'toast', nodeids: [currentNode._id], title: 'MeshCentral', msg: Q('d2devToast').value });
+            meshserver.send({ action: 'toast', nodeids: [currentNode._id], title: 'NuubixRemote', msg: Q('d2devToast').value });
         }
 
         // && ((meshrights == 0xFFFFFFFF) || ((meshrights & 65536) == 0))
@@ -7467,7 +7467,7 @@
 
         function p20installAndroidDialog() {
             if (xxdialogMode) return;
-            var x = '<div style=text-align:center><p>' + "Install the MeshCentral Agent on your Android device. Once installed, click the pairing link to connect your device to this server." + '</p>';
+            var x = '<div style=text-align:center><p>' + "Install the NuubixRemote Agent on your Android device. Once installed, click the pairing link to connect your device to this server." + '</p>';
             x += '<p><a rel=\"noreferrer noopener\" target=_blank href=\"https://play.google.com/store/apps/details?id=com.meshcentral.agent2\"><img style=cursor:pointer src=\"images/google-play-140.png\" width=140 srcset=\"images/google-play-280.png 2x\" /></a></p>';
             x += '<p><a rel=\"noreferrer noopener\" target=_blank href=\"https://www.amazon.co.uk/gp/product/B097Z4Q7SK/\"><img style=cursor:pointer src=\"images/amazon-appstore-140.png\"  width=140 srcset=\"images/amazon-appstore-280.png 2x\" /></a></p>';
             x += '<p><a rel=\"noreferrer noopener\" target=_blank href="meshagents?id=14' + (urlargs.key?('&key=' + urlargs.key):'') + '" title="' + "APK version of the MeshAgent" + '">' + "Android APK" + '</a></p>';
