@@ -17,7 +17,7 @@
       "nightMode": 1,
       "meshMessengerTitle": "NuubixRemote",
       "agentCustomization": {
-        "displayName": "NuubixRemote",
+        "displayName": "NuubixRemote Agent",
         "description": "Agente de soporte remoto NuubixRemote",
         "companyName": "Nuubix",
         "serviceName": "nuubixremoteagent",
